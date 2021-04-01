@@ -17,10 +17,9 @@ class InstallCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'sail:install
-        {--with= : The services that should be included in the installation}
-        {--project=laravel.test:The project name}
-        {--php=7.4 : PHP Version. Support: 7.4, 8.0 (default: 7.4)';
+    protected $signature = 'sail:install {--with= : The services that should be included in the installation}
+        {--project=laravel.test : The project name}
+        {--php=7.4 : PHP Version. Support: 7.4, 8.0}';
 
     /**
      * The console command description.
