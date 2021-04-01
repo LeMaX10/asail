@@ -117,7 +117,7 @@ class InstallCommand extends Command
                 '{{depends}}'
             ],
             [
-                $this->option('name'),
+                $this->option('project'),
                 $this->option('php'),
                 rtrim($stubs),
                 $volumes,
@@ -167,7 +167,7 @@ class InstallCommand extends Command
             $environment .= "\nMEILISEARCH_HOST=http://meilisearch:7700\n";
         }
 
-        $environment .= "APP_SERVICE={$this->option('name')}";
+        $environment .= "APP_SERVICE={$this->option('project')}";
         file_put_contents($this->laravel->basePath('.env'), $environment);
     }
 }
