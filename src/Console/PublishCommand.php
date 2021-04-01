@@ -47,7 +47,7 @@ class PublishCommand extends Command
             $this->laravel->basePath('docker-compose.yml'),
             str_replace(
                 array_map(static function (string $version): string {
-                    return "./vendor/laravel/sail/runtimes/{$version}";
+                    return "./vendor/lemax10/asail/runtimes/{$version}";
                 }, $this->supportVersions),
                 array_map(static function (string $version): string {
                     return "./docker/{$version}";

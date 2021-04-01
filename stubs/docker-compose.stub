@@ -3,7 +3,7 @@ version: '3'
 services:
     {{projectName}}:
         build:
-            context: ./vendor/laravel/sail/runtimes/{{version}}
+            context: ./vendor/lemax10/asail/runtimes/{{version}}
             dockerfile: Dockerfile
             args:
                 WWWGROUP: '${WWWGROUP}'
