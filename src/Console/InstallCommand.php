@@ -149,6 +149,7 @@ class InstallCommand extends Command
         } else {
             $replace = [
                 'DB_HOST=127.0.0.1' => "DB_HOST=mysql",
+                'DB_HOST=localhost' => "DB_HOST=mysql",
                 'DB_USERNAME=root' => "DB_USERNAME=sail",
                 'DB_PASSWORD=' => "DB_PASSWORD=password",
             ];
