@@ -40,3 +40,59 @@ Please review [our security policy](https://github.com/laravel/sail/security/pol
 ## License
 
 Laravel Advanced Sail is open-sourced software licensed under the [MIT license](LICENSE.md).
+
+
+## [DEV] Running in octobercms
+1. Add repository to composer.json
+```json
+{
+    ...
+    "repositories": [
+        {
+            "type":"vcs",
+            "url": "https://github.com/LeMaX10/asail.git"
+        }
+    ],    
+    ...
+}
+```
+
+2. Add require-dev package in composer.json
+```json
+{
+  ...
+  "require-dev": {
+     ....
+     "lemax10/asail": "1.x-dev"
+  }
+  ...
+}
+```
+
+3. Enable discovered package or add service provider to config/app.php
+Enable discovered package config/app.php: 
+```php
+'loadDiscoveredPackages' => true,
+```
+
+4. Change october settings to settings in enviroiment:
+```bash
+php artisan october:env
+```
+
+5. Create docker-compose configuration
+```bash
+php artisan sail:install --with=mysql,redis --project=example.loc --php=7.4
+```
+
+6. Run project:
+```bash
+vendor/bin/sail up -d
+```
+
+7. Installed project:
+```bash
+vendor/bin/sail artisan october:up
+```
+
+
