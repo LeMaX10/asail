@@ -7,6 +7,7 @@ services:
             dockerfile: Dockerfile
             args:
                 WWWGROUP: '${WWWGROUP}'
+                XDEBUG: ‘true’
         image: sail-{{version}}/app
         ports:
             - '${APP_PORT:-80}:80'
